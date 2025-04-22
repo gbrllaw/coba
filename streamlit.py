@@ -60,7 +60,7 @@ if submit_button:
     input_df = pd.DataFrame([user_data])
 
     # Make prediction
-    prediction, actual = model_inference.predict(input_df)
+    prediction = model_inference.predict(input_df)
 
     # Show the prediction result
     if prediction[0] == 1:
