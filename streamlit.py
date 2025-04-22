@@ -6,8 +6,8 @@ from predict import LoanStatusPredictor  # Assuming you have the model inference
 model_inference = LoanStatusPredictor(
     model_path='xgb_model.pkl',
     scaler_path='scaler.pkl',
-    columns_path='columns.pkl',
-    encoder_path='encoders.pkl'
+    encoder_path='encoders.pkl',
+    columns_path='columns.pkl'
 )
 
 # Judul aplikasi
