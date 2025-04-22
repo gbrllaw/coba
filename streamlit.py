@@ -1,9 +1,9 @@
 import streamlit as st
 import pandas as pd
-from predict import LoanXGBoostModelInference  # Assuming you have the model inference class in loan_model.py
+from predict import LoanStatusPredictor  # Assuming you have the model inference class in loan_model.py
 
 # Inisialisasi model inference
-model_inference = LoanXGBoostModelInference(
+model_inference = LoanStatusPredictor(
     model_path='xgb_model.pkl',
     scaler_path='scaler.pkl',
     columns_path='columns.pkl',
