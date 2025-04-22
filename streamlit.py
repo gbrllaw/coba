@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from loan_model import LoanXGBoostModelInference  # Assuming you have the model inference class in loan_model.py
+from predict import LoanXGBoostModelInference  # Assuming you have the model inference class in loan_model.py
 
 # Inisialisasi model inference
 model_inference = LoanXGBoostModelInference(
