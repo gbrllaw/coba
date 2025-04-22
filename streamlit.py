@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from predict import LoanStatusPredictor  # Assuming you have the model inference class in loan_model.py
+from predict import LoanStatusPredictor  
 
 # Inisialisasi model inference
 model_inference = LoanStatusPredictor(
