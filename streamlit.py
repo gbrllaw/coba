@@ -7,7 +7,7 @@ model_inference = LoanStatusPredictor(
     model_path='xgb_model.pkl',
     scaler_path='scaler.pkl',
     columns_path='columns.pkl',
-    encoders_path='encoders.pkl'
+    encoder_path='encoders.pkl'
 )
 
 # Judul aplikasi
