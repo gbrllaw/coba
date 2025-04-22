@@ -2,7 +2,6 @@ import joblib
 import pandas as pd
 import streamlit as st
 from sklearn.preprocessing import LabelEncoder
-from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import RobustScaler
 
 # Inisialisasi class untuk prediksi
@@ -22,9 +21,9 @@ class LoanXGBoostModelInference:
         features['person_gender'] = features['person_gender'].str.lower()
         features['person_gender'] = features['person_gender'].replace('fe male', 'female')
 
-        # Imputasi missing value
-        imputer = SimpleImputer(strategy='median')
-        features['person_income'] = imputer.fit_transform(features[['person_income']])
+        # Imputasi missing value: Mengisi nilai kosong pada 'person_income' dengan median
+        median_income = features['person_income'].median()  # Hitung median dari kolom person_income
+        features['person_income'].fillna(median_income, inplace=True)  # Isi nilai kosong dengan median
 
         # Scaling numerik
         numeric_cols = features.select_dtypes(include=['int64', 'float64']).columns
